@@ -1,12 +1,12 @@
 " File: vimrc
 " Author: James Rutherford
 " Created: 2003-04-01
-" Last Updated: 2014-04-24
+" Last Updated: 2017-02-08
 " Note: For most systems, you can ignore the gentoo-specific things at the end
 " of this file; they won't do any harm.
 
 " set some useful defaults
-"colorscheme jellybeans
+colorscheme jellybeans
 set tabstop=4           " set tabs to 4 spaces wide
 set softtabstop=4
 set shiftwidth=4        " # of spaces to use for each (auto) indent step
@@ -132,7 +132,7 @@ let g:solarized_contrast="high"
 let g:solarized_termcolors=256
 let g:solarized_visibility="high"
 set background=dark     " default to dark background
-"colorscheme solarized
+colorscheme solarized
 
 highlight SpellBad term=underline gui=undercurl guisp=Orange
 
