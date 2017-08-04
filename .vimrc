@@ -1,7 +1,8 @@
 " File: vimrc
-" Author: James Rutherford
+" Author: Max Goodridge
+" Original Author Credit: James Rutherford
 " Created: 2003-04-01
-" Last Updated: 2017-02-08
+" Last Updated: 2017-08-03
 " Note: For most systems, you can ignore the gentoo-specific things at the end
 " of this file; they won't do any harm.
 
@@ -26,7 +27,7 @@ set undolevels=1000     " nice large upper limit on undo
 set history=50          " keep 50 lines of command history
 set ruler               " show the cursor position all the time
 set incsearch           " highlight searches while you type them
-set mouse=a             " use the mouse for visual selects, scrolling, etc...
+"set mouse=a             " use the mouse for visual selects, scrolling, etc...
 set fileformat=unix     " er... <LF> anyone?
 set wildmenu            " enable more advanced tab completion -- nice
 set title               " let xterm inherit the title according to vim
@@ -52,6 +53,9 @@ set laststatus=2        " always show the full status line
 set scrolloff=4         " start scrolling when we're 4 lines from the edge
 set sidescrolloff=16
 set sidescroll=1
+
+" Allow typescript syntax highlighting by default
+set syntax=typescript
 
 " when doing tab completion, give the following files lower priority. also see
 " 'wildignore' to completely ignore files, and 'wildmenu' to enable enhanced
@@ -148,6 +152,9 @@ hi SignColumn ctermbg=232 guibg=#080808
 " Set some ignores for ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp*.pyc,*.zip
 
+" Identiy Typescript files to syntax highlight properly
+autocmd BufNewFile,BufRead *.ts   set syntax=typescript
+
 " base vundle, required
 Bundle 'gmarik/vundle'
 
@@ -164,6 +171,8 @@ Bundle 'scrooloose/syntastic'
 "Bundle 'klen/python-mode'
 "Bundle 'davidhalter/jedi-vim'
 Bundle 'airblade/vim-gitgutter'
+Bundle 'leafgarland/typescript-vim'
+Bundle 'christoomey/vim-tmux-navigator'
 
 " vim.org scripts
 Bundle 'L9'

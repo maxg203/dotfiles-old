@@ -1,7 +1,7 @@
 " File: maps.vim
 " Author: James Rutherford
 " Created: 2005-05-07
-" Last Updated: 2013-03-05
+" Last Updated: 2017-03-24
 " Description: A collection of keymappings to make common tasks accessible
 " with fewer keystrokes.
 " Usage: Usually lives in the plugin directory and is automatically sourced at
@@ -161,10 +161,10 @@ map ,,c :FufChangeList<CR>
 map ,,l :FufLine<CR>
 
 " Wean off the arrows!
-noremap <Up> <nop>
-noremap <Down> <nop>
-noremap <Left> <nop>
-noremap <Right> <nop>
+" noremap <Up> <nop>
+" noremap <Down> <nop>
+" noremap <Left> <nop>
+" noremap <Right> <nop>
 
 " ; in normal mode to save
 noremap ; :w<CR>

@@ -1,10 +1,18 @@
 [color]
 	diff = auto
 [diff]
-    tool = vimdiff
+	tool = meld
 [alias]
 	incoming = "!git remote update -p; git log ..@{u}"
 	outgoing = log @{u}..
+	graph = log --decorate --color --pretty --graph
+	s = status
 [user]
     name = Max Goodridge
     email = max.goodridge@maplecroft.com
+[push]
+	default = matching
+[help]
+	autocorrect = 1
+[core]
+	editor = vim
